@@ -1,0 +1,17 @@
+web:
+    image: nginx:latest
+    ports:
+        - "80:80"
+    volumes:
+        - ./site.conf:/etc/nginx/conf.d/site.conf
+    # Add the volumes from the PHP container, as Nginx needs access to your project files
+    volumes_from:
+        - php
+    links:
+        - php
+
+php:
+    image: php:7-fpm
+    volumes:
+        # I changed to the path that is specified in your site.conf file
+        - .:/var/www/html
