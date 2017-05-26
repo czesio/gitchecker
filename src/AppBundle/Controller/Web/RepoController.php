@@ -11,8 +11,9 @@ use Github\Api\Repository;
 use Github\Client;
 use AppBundle\Form\GihubPackageComparisionFormType;
 use AppBundle\Repository\RepositoryHandler;
+use AppBundle\Controller\BaseController;
 
-class RepoController extends Controller
+class RepoController extends BaseController
 {
     /**
      *
@@ -39,10 +40,7 @@ class RepoController extends Controller
         $isComparisionDataSet = false;
         if ($form->isValid()) {
             $data = $form->getData();
-            $repoHandler = new RepositoryHandler(
-                $data,
-                ($this->container->hasParameter('git_api_token') ? $this->getParameter('git_api_token') : null)
-            );
+            $repoHandler = $this->createRepoHandlerAccess($data);
             $comparisionData = $repoHandler->getComparisionData();
             $isComparisionDataSet = true;
         }

@@ -9,8 +9,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use AppBundle\Repository\RepositoryHandler;
+use AppBundle\Controller\BaseController;
 
-class RepoController extends Controller
+class RepoController extends BaseController
 {
     /**
      *
@@ -36,10 +37,7 @@ class RepoController extends Controller
         $repoNameTwo = $request->get('repoNameTwo');
         $params = array($repoNameOne, $repoNameTwo);
         if (strlen($repoNameTwo) && strlen($repoNameOne)) {
-            $repoHandler = new RepositoryHandler($params
-                , ($this->container->hasParameter('git_api_token') ? $this->getParameter('git_api_token') : null)
-            );
-
+            $repoHandler = $this->createRepoHandlerAccess($params);
             $comparisionData = $repoHandler->getComparisionData();
             if (empty($comparisionData)) {
                 throw $this->createNotFoundException('Sorry, no repos at all');
