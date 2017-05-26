@@ -12,6 +12,7 @@ class GihubPackageComparisionFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->setMethod('GET')
             ->add(
                 'firstRepoName',
                 TextType::class,
