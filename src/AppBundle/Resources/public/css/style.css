@@ -1,0 +1,38 @@
+body {
+    background-color: #eee;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    font-size:11px;
+}
+#comparison-wrapper {
+    margin-top:40px;
+}
+.form-comparision {
+    margin: 0 auto;
+    max-width: 500px;
+}
+.form-comparision .form-control {
+    box-sizing: border-box;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    position: relative;
+}
+.first-record {
+    color: #0D3349;
+}
+.second-record {
+    color: #CC0000;
+}
+.like-pre {
+    display: block;
+    unicode-bidi: embed;
+    font-family: monospace;
+    white-space: pre-line;
+}
+.repos-info {
+    color: red;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 2em;
+}

@@ -1,0 +1,37 @@
+
+{% set counter = 0 %}
+{% for key, comparisionRow in comparisionData %}
+    {% set keyName = 'app.' ~ key %}
+    {% if counter == 0 or counter is divisible by(3)  %}
+        <div class="row">
+    {% endif %}
+        <div class="col-sm-4">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h4 class="panel-title">{{ keyName|trans }}</h4>
+                </div>
+                <div class="panel-body">
+                    <p class="first-record like-pre">{% if comparisionRow[0] is empty %} -
+                                                {% else %}{{ comparisionRow[0] }}{% endif %}</p>
+                    <p class="second-record like-pre">{%  if comparisionRow.1 is defined %}
+                                                            {%  if comparisionRow[1] is empty %}
+                                                                    -
+                                                                {% else %}
+                                                                    {{ comparisionRow[1] }}
+                                                            {% endif %}
+                                                        {% else %}
+                                                            -
+                                                        {% endif %}</p>
+                </div>
+            </div>
+        </div>
+    {% if loop.index is divisible by(3)  %}
+        </div>
+    {% endif %}
+
+    {% set counter = counter + 1 %}
+{% endfor %}
+
+{% if not counter is divisible by(3)  %}
+    </div>
+{% endif %}

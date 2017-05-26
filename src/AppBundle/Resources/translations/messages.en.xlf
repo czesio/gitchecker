@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="app.first_repo_name">
+                <source>app.first_repo_name</source>
+                <target>Type first repo name</target>
+            </trans-unit>
+            <trans-unit id="app.second_repo_name">
+                <source>app.second_repo_name</source>
+                <target>Type second repo name</target>
+            </trans-unit>
+            <trans-unit id="app.submit_name">
+                <source>app.submit_name</source>
+                <target>Get comparision</target>
+            </trans-unit>
+            <trans-unit id="app.full_name">
+                <source>app.full_name</source>
+                <target>Repo name</target>
+            </trans-unit>
+            <trans-unit id="app.html_url">
+                <source>app.html_url</source>
+                <target>Repo url</target>
+            </trans-unit>
+            <trans-unit id="app.description">
+                <source>app.description</source>
+                <target>Repo description</target>
+            </trans-unit>
+            <trans-unit id="app.stargazers_count">
+                <source>app.stargazers_count</source>
+                <target>Stars</target>
+            </trans-unit>
+            <trans-unit id="app.forks_count">
+                <source>app.forks_count</source>
+                <target>Fork</target>
+            </trans-unit>
+            <trans-unit id="app.subscribers_count">
+                <source>app.subscribers_count</source>
+                <target>Watching</target>
+            </trans-unit>
+            <trans-unit id="app.updated_at">
+                <source>app.updated_at</source>
+                <target>Watching</target>
+            </trans-unit>
+            <trans-unit id="app.comparision_info">
+                <source>app.comparision_info</source>
+                <target>Comparision info:</target>
+            </trans-unit>
+            <trans-unit id="app.release_tag_name">
+                <source>app.release_tag_name</source>
+                <target>Last release (no "prerelease" or "draft")</target>
+            </trans-unit>
+            <trans-unit id="app.release_published_at">
+                <source>app.release_published_at</source>
+                <target>Release date</target>
+            </trans-unit>
+            <trans-unit id="app.commit_date">
+                <source>app.commit_date</source>
+                <target>Last commit date</target>
+            </trans-unit>
+            <trans-unit id="app.commit_message">
+                <source>app.commit_message</source>
+                <target>Last commit message</target>
+            </trans-unit>
+            <trans-unit id="app.check_repo">
+                <source>app.check_repo</source>
+                <target>mhm, please check if the repos names are correct</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

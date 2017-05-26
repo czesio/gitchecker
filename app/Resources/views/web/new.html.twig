@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        <div>
+            {{ form_errors(form.firstRepoName) }}
+            {{ form_widget(form.firstRepoName) }}
+        </div>
+        <div>
+            {{ form_errors(form.secondRepoName) }}
+            {{ form_widget(form.secondRepoName) }}
+        </div>
+        <div>
+            {{ form_widget(form.save) }}
+        </div>
+        {{ form_end(form) }}
+
+        {% if isComparisionDataSet %}
+            {% if comparisionData | length <= 0 %}
+                <div>
+                    <p class="repos-info">{{ 'app.check_repo' | trans }}</p>
+                </div>
+            {% else %}
+                <div id="comparison-wrapper">
+                    {{ include('web/comparision.html.twig') }}
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock %}
